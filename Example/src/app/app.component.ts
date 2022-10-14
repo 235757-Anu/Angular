@@ -12,10 +12,13 @@ export class AppComponent {
   list:any[]=[];
    add(item:String)
     {
-      
+      if(item=" "){
+        alert("this field cannot be left empty");
+      }
+      else{
 this.list.push({item});
 console.log(this.list)
-
+      }
   }
   remove(i:number)
   {
